@@ -23,7 +23,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 	protected static final int PICK_CONTACT_REQUEST = 0;
 	int p;
-    Button next,entra,esci;
+    Button next,entra,esci,exi;
     TextView lbldave;
     AutoCompleteTextView codice;
     boolean ok;
@@ -40,7 +40,23 @@ public class MainActivity extends Activity {
       lbldave= (TextView) findViewById(R.id.txtdave);
       codice = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView1);
     	stop = (RelativeLayout) findViewById(R.id.idRLTEXT);
-       
+    	 exi = (Button) findViewById(R.id.button2);
+     	exi.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					try {
+						this.finalize();
+					} catch (CloneNotSupportedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (Throwable e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			});
     
     codice.setOnKeyListener(new View.OnKeyListener() {
 		

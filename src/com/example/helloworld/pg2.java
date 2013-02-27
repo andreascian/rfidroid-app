@@ -19,6 +19,7 @@ public class pg2 extends Activity {
         {
         	 entra = (Button) findViewById(R.id.identra);
         	 esci = (Button) findViewById(R.id.idesci);
+        	
         	 final TextView idcodice = (TextView) findViewById(R.id.textView1);   
         	
         	 Bundle bundle = this.getIntent().getExtras();    
