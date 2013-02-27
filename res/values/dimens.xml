@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="neworal">250dp</dimen>
+    <dimen name="neworah">100dp</dimen>
+    <dimen name="dimora">60dp</dimen>
+    <dimen name="paddingApp">10dp</dimen>
+    <dimen name="titolo">25dp</dimen>
+    <dimen name="titolo2">80dp</dimen>
+    <dimen name="titolo1">40dp</dimen>
+
+</resources>
