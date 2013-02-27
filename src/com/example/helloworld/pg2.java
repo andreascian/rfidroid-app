@@ -30,8 +30,7 @@ public class pg2 extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-				esci.setWidth(350);
-				esci.setHeight(150);
+				
 				Intent form_intent = new Intent("com.example.helloworld.Entra");
 				
 				startActivity(form_intent);
