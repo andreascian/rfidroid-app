@@ -17,12 +17,13 @@ public class pg2 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pagina2);
         {
+        	
         	 entra = (Button) findViewById(R.id.identra);
         	 esci = (Button) findViewById(R.id.idesci);
         	
         	 final TextView idcodice = (TextView) findViewById(R.id.textView1);   
         	
-        	 Bundle bundle = this.getIntent().getExtras();    
+        	 final Bundle bundle = this.getIntent().getExtras();    
         	idcodice.setText("BUONGIORNO          "+bundle.getString("name"));
         	
 		entra.setOnClickListener(new View.OnClickListener() {
@@ -31,10 +32,14 @@ public class pg2 extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-				
+				Intent form_intent = new Intent(getApplicationContext(), Entra.class);
+				form_intent.putExtras(bundle);
+				startActivity(form_intent);
+				finish();
+				/*
 				Intent form_intent = new Intent("com.example.helloworld.Entra");
 				
-				startActivity(form_intent);
+				startActivity(form_intent);*/
 				
 			}
 		});
@@ -45,9 +50,13 @@ esci.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				 
-				Intent form_intent = new Intent("com.example.helloworld.Esci");
-				
+				Intent form_intent = new Intent(getApplicationContext(), Esci.class);
+				form_intent.putExtras(bundle);
 				startActivity(form_intent);
+				finish();
+				/*Intent form_intent = new Intent("com.example.helloworld.Esci");
+				
+				startActivity(form_intent);*/
 				
 			}
 			

@@ -40,26 +40,26 @@ public final class R {
         public static final int splash=0x7f020009;
     }
     public static final class id {
-        public static final int TableRow01=0x7f08000b;
-        public static final int TableRow02=0x7f080009;
+        public static final int TableRow01=0x7f08000a;
+        public static final int TableRow02=0x7f080008;
         public static final int TableRow03=0x7f08000d;
-        public static final int TableRow04=0x7f08000c;
-        public static final int TextView02=0x7f08000a;
+        public static final int TableRow04=0x7f08000b;
+        public static final int TextView02=0x7f080009;
         public static final int action_settings=0x7f08001c;
         public static final int autoCompleteTextView1=0x7f080003;
         public static final int btnConfus=0x7f08001a;
         public static final int button1=0x7f080004;
-        public static final int button2=0x7f080005;
+        public static final int button2=0x7f08000c;
         public static final int digitalClock1=0x7f080002;
         public static final int idIndietro1=0x7f08001b;
         public static final int idRLTEXT=0x7f080000;
-        public static final int idTornahome=0x7f080006;
+        public static final int idTornahome=0x7f080005;
         public static final int identra=0x7f080018;
         public static final int idesci=0x7f080017;
         public static final int indietro1=0x7f080016;
         public static final int ratingBar1=0x7f080019;
-        public static final int tableLayout1=0x7f080008;
-        public static final int tableLayout2=0x7f080007;
+        public static final int tableLayout1=0x7f080007;
+        public static final int tableLayout2=0x7f080006;
         public static final int tableRow1=0x7f08000e;
         public static final int tableRow2=0x7f080010;
         public static final int tableRow3=0x7f080012;

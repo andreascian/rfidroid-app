@@ -25,8 +25,9 @@ public class Entra extends Activity {
         app1= (TextView) findViewById(R.id.textView2);
         app2= (TextView) findViewById(R.id.textView3);
         app3= (TextView) findViewById(R.id.textView4);
+   	 final Bundle bundle1 = this.getIntent().getExtras();  
         	conferma.setOnClickListener(new View.OnClickListener() {
-        		
+        	  
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
@@ -50,7 +51,10 @@ canc.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-				
+					Bundle bundle = bundle1;
+					Intent form_intent = new Intent(getApplicationContext(), pg2.class);
+					form_intent.putExtras(bundle);
+					startActivity(form_intent);
 					finish();
 				}
 			});

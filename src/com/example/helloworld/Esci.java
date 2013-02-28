@@ -18,7 +18,7 @@ public class Esci extends Activity {
         super.onCreate(savedInstanceState);
         
         setContentView(R.layout.uscita);
-        
+        final Bundle bundle1 = this.getIntent().getExtras();  
         	conferma= (Button) findViewById(R.id.btnConfus);
         	indietro= (Button) findViewById(R.id.idIndietro1);
 conferma.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +38,10 @@ indietro.setOnClickListener(new View.OnClickListener() {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-	
+		Bundle bundle = bundle1;
+		Intent form_intent = new Intent(getApplicationContext(), pg2.class);
+		form_intent.putExtras(bundle);
+		startActivity(form_intent);
 		finish();
 	}
 });
