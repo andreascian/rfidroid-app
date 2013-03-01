@@ -40,4 +40,10 @@
         android:layout_alignParentTop="true"
         android:text="Button" />
 
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/button1" />
+
 </RelativeLayout>

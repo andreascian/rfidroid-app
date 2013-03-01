@@ -3,6 +3,8 @@ package com.example.helloworld;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
@@ -18,14 +20,62 @@ public class Entra extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.entrata);
-        
+        final Bundle bundle1 = this.getIntent().getExtras(); 
         conferma= (Button) findViewById(R.id.idTornahome);
         indietro= (Button) findViewById(R.id.indietro1);
         canc= (Button) findViewById(R.id.button2);
         app1= (TextView) findViewById(R.id.textView2);
         app2= (TextView) findViewById(R.id.textView3);
         app3= (TextView) findViewById(R.id.textView4);
-   	 final Bundle bundle1 = this.getIntent().getExtras();  
+        
+        final AlertDialog txtOra = new AlertDialog.Builder(this).create();  
+        txtOra.setCancelable(false); // This blocks the 'BACK' button  
+        txtOra.setMessage("Sei entrato alle ore  "+bundle1.getString("ora")); 
+         txtOra.setButton2("OK", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				 dialog.dismiss();   
+				
+			}
+		});
+         txtOra.show();
+        final AlertDialog txtPrima = new AlertDialog.Builder(this).create();  
+        txtPrima.setCancelable(false); // This blocks the 'BACK' button  
+        txtPrima.setMessage("Cancellare appuntamenti");  
+        final AlertDialog txtNoapp = new AlertDialog.Builder(this).create();  
+        txtNoapp.setCancelable(false); // This blocks the 'BACK' button  
+        txtNoapp.setMessage("Non ci sono appuntamenti per oggi");  
+        txtNoapp.setButton2("OK", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				 dialog.dismiss();   
+				
+			}
+		});
+        txtPrima.setButton("Conferma", new DialogInterface.OnClickListener() {  
+            @Override  
+            public void onClick(DialogInterface dialog, int which) {  
+                dialog.dismiss();   
+            	app1.setText("");
+				app2.setText("");
+				app3.setText("");
+            }
+            
+        });  
+        txtPrima.setButton2("Annulla", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				 dialog.dismiss();   
+				
+			}
+		});
+   	 
         	conferma.setOnClickListener(new View.OnClickListener() {
         	  
 				@Override
@@ -40,10 +90,11 @@ canc.setOnClickListener(new View.OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
+					if(app1.getText()=="" && app2.getText()=="" && app3.getText()=="")
+						txtNoapp.show();
+					else
 					// TODO Auto-generated method stub
-					app1.setText("");
-					app2.setText("");
-					app3.setText("");
+				txtPrima.show();
 				}
 			});
         	indietro.setOnClickListener(new View.OnClickListener() {

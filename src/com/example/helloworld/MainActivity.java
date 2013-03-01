@@ -17,14 +17,20 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.DigitalClock;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
+	
+	//parte web
+	
+	
 	protected static final int PICK_CONTACT_REQUEST = 0;
 	int p;
     Button next,entra,esci,exi;
     TextView lbldave;
+    DigitalClock oraEntra;
     AutoCompleteTextView codice;
     boolean ok;
     RelativeLayout stop;
@@ -40,7 +46,7 @@ public class MainActivity extends Activity {
       lbldave= (TextView) findViewById(R.id.txtdave);
       codice = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView1);
     	stop = (RelativeLayout) findViewById(R.id.idRLTEXT);
-    
+    oraEntra = (DigitalClock) findViewById(R.id.digitalClock1);
     
     codice.setOnKeyListener(new View.OnKeyListener() {
 		
@@ -52,7 +58,7 @@ public class MainActivity extends Activity {
 			{
 				Bundle bundle = new Bundle();
 				bundle.putString("name", codice.getText().toString());
-				
+				bundle.putString("ora", oraEntra.getText().toString());
 				//mio programma
 				Intent form_intent = new Intent(getApplicationContext(), pg2.class);
 				form_intent.putExtras(bundle);
